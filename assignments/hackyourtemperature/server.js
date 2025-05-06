@@ -7,19 +7,14 @@ app.use(express.json());
 
 
 app.get('/', (req, res) => {
-
-    res.sendStatus = 200;
-    res.send('Hello from backend to frontend!');
-    res.end;
+    res.status(200).send('Hello from backend to frontend!');
 });
 
 
 app.post('/weather', (req, res) => {
     const cityName = req.body.cityName;
 
-    res.sendStatus = 200;
-    res.send(cityName);
-    res.end;
+    res.status(200).send(cityName);
 });
 
 
