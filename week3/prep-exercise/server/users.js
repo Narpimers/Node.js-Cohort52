@@ -32,7 +32,7 @@ const getToken = (req) => {
 };
 
 
-export const createNewUser = async(req, res) => {
+export const createNewUser = async (req, res) => {
     if (!isValidUser(req)) {
     res.status(400).json({ message: "Missing name or password" });
     return
